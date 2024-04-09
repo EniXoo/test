@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flexcity?currentSchema=public
+    username: flexcity
+    password: flexcity
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update
+  sql:
+    init:
+      mode: always
+      platform: postgres
+      data-locations: classpath:init_database.sql
